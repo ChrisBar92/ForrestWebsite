@@ -1,3 +1,9 @@
+$black-color: #000;
+$white-color: #fff;
+$green-color: rgb(0, 100, 0);
+$primary-bg: #eee;
+$secondary-bg: #ddd;
+
 *,
 *::before,
 *::after {
@@ -7,6 +13,129 @@
 }
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	border: 0.1rem solid transparent;
+	color: inherit;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+li {
+	list-style: none;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+@mixin focus {
+	border: 0.1rem solid $black-color;
+	border-radius: 0.3rem;
+}
+
+.nav {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-color: $primary-bg;
+	// overflow: hidden;
+	z-index: 30;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 1rem;
+		color: $black-color;
+		font-weight: 300;
+	}
+
+	&__logo {
+		padding: 2rem;
+		font-size: 3.6rem;
+
+		&:focus {
+			@include focus;
+		}
+
+		&-icon {
+			padding-right: 1rem;
+			color: $green-color;
+		}
+	}
+
+	&__list {
+		display: flex;
+
+		&-link {
+			padding: 3rem;
+			font-size: 2rem;
+			transition: background-color 0.3s, color 0.3s;
+
+			&:hover {
+				background-color: $black-color;
+				color: $white-color;
+				border-radius: 0.3rem;
+			}
+
+			&:focus {
+				@include focus;
+			}
+		}
+	}
+}
+
+.header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 50vh;
+	background-image: url('/dist/img/jungle-1807476_1280.jpg');
+	background-size: cover;
+	background-position: center;
+
+	&__shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba($color: #000000, $alpha: 0.6);
+		z-index: 10;
+	}
+
+	&__box {
+		position: relative;
+		padding-left: 3rem;
+		color: $white-color;
+		z-index: 20;
+
+		&-name {
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+
+		&-title {
+			font-size: 4.8rem;
+			margin: 1rem 0;
+		}
+	}
+}
+
+.aboutus {
+	height: 100vh;
+	background-color: #a0f;
 }
