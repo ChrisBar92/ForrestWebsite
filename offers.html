@@ -14,8 +14,106 @@
 <link rel="stylesheet" href="/dist/css/main.min.css">
 
 <body>
-    <a href="index.html">home</a>
-    <a href="contact.html">kontakt</a>
+    <nav class="nav">
+    <div class="nav__container wrapper">
+        <a href="index.html" class="nav__logo" aria-label="forest"><i
+                class="fa-solid fa-tree nav__logo-icon"></i>Forest</a>
+        <ul class="nav__list">
+            <li class="nav__list-item"><a href="index.html" class="nav__list-link" aria-label="Home">Home</a></li>
+            <li class="nav__list-item"><a href="#aboutus" class="nav__list-link" aria-label="O nas">O nas</a></li>
+            <li class="nav__list-item"><a href="#offer" class="nav__list-link" aria-label="Oferta">Oferta</a></li>
+            <li class="nav__list-item"><a href="contact.html" class="nav__list-link"
+                    aria-label="Kontakt">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <header class="header offerts__header">
+        <div class="header__shadow"></div>
+        <div class="header__box wrapper">
+            <p class="header__box-name">Forest Group</p>
+            <h1 class="header__box-title">Najlepsze oferty w najniższej cenie</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="offerts padding-section">
+            <div class="wrapper">
+                <div class="section-title">Oferty</div>
+                <div class="offerts__container">
+                    <div class="offerts__box">
+                        <img src="/dist/img/girl-5785590_1280.jpg" alt="dziecko z plecakiem idące po polanie" class="offerts__box-image">
+                        <div class="offerts__box-content">
+                            <p class="offerts__box-name">Oferta Demo</p>
+                            <p class="offerts__box-price">$0</p>
+                            <p class="offerts__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid accusantium ipsum dolores ex voluptas vero odio porro dicta maiores quia quod, iure mollitia. Omnis ut earum ab iusto dignissimos.</p>
+                        </div>
+                    </div>
+                    <div class="offerts__box">
+                        <div class="offerts__box-content">
+                            <p class="offerts__box-name">Oferta Standard</p>
+                            <p class="offerts__box-price">$99</p>
+                            <p class="offerts__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid accusantium ipsum dolores ex voluptas vero odio porro dicta maiores quia quod, iure mollitia. Omnis ut earum ab iusto dignissimos.</p>
+                        </div>
+                        <img src="/dist/img/jungle-1807476_1280.jpg" alt="schodzy zarośnięte mchem w jungli" class="offerts__box-image">
+                    </div>
+                    <div class="offerts__box">
+                        <img src="/dist/img/waters-3095682_1280.jpg" alt="drzewo rosnące na skale w jeziorze" class="offerts__box-image">
+                        <div class="offerts__box-content">
+                            <p class="offerts__box-name">Oferta Premium</p>
+                            <p class="offerts__box-price">$299</p>
+                            <p class="offerts__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid accusantium ipsum dolores ex voluptas vero odio porro dicta maiores quia quod, iure mollitia. Omnis ut earum ab iusto dignissimos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer padding-section">
+    <div class="wrapper">
+        <div class="footer__container">
+            <a href="#" class="nav__logo footer__logo" aria-label="forest"><i
+                    class="fa-solid fa-tree nav__logo-icon"></i>Forest</a>
+            <div class="footer__boxes">
+                <div class="footer__box">
+                    <p class="footer__box-name">O nas</p>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a href="index.html" class="footer__box-list-link"
+                                aria-label="historia">Historia</a></li>
+                        <li class="footer__box-list-item"><a href="index.html" class="footer__box-list-link"
+                                aria-label="parki">Parki</a></li>
+                        <li class="footer__box-list-item"><a href="index.html" class="footer__box-list-link"
+                                aria-label="opinie">Opinie</a></li>
+                    </ul>
+                </div>
+                <div class="footer__box">
+                    <p class="footer__box-name">Nasza firma</p>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a href="index.html" class="footer__box-list-link"
+                                aria-label="Praca">Praca</a></li>
+                        <li class="footer__box-list-item"><a href="index.html" class="footer__box-list-link"
+                                aria-label="Kadry">Kadry</a></li>
+                        <li class="footer__box-list-item"><a href="index.html" class="footer__box-list-link"
+                                aria-label="Zarząd">Zarząd</a></li>
+                    </ul>
+                </div>
+                <div class="footer__box">
+                    <p class="footer__box-name">Dokumenty</p>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a href="index.html" class="footer__box-list-link"
+                                aria-label="Wnioski">Wnioski</a></li>
+                        <li class="footer__box-list-item"><a href="index.html" class="footer__box-list-link"
+                                aria-label="Rezerwacje">Rezerwacje</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="footer__copyright">&copy;<span class="footer__copyright-year">2024</span> Forest Group Company
+        Ltd.</p>
+</footer>
 </body>
 
 </html>

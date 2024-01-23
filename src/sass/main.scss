@@ -22,6 +22,13 @@ $gray-color: gray;
 	z-index: 10;
 }
 
+@mixin text-description {
+	font-weight: 300;
+	font-size: 1.6rem;
+	line-height: 3rem;
+	text-align: justify;
+}
+
 *,
 *::before,
 *::after {
@@ -202,10 +209,7 @@ li {
 		}
 
 		&-description {
-			font-weight: 300;
-			font-size: 1.6rem;
-			line-height: 3rem;
-			text-align: justify;
+			@include text-description;
 		}
 	}
 }
@@ -361,5 +365,47 @@ li {
 		border-top: 0.1rem solid $black-color;
 		text-align: center;
 		font-size: 1.4rem;
+	}
+}
+
+.offerts {
+	&__header {
+		background-image: url('/dist/img/waters-3095682_1280.jpg');
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__box {
+		padding: 5rem 3rem;
+		display: flex;
+		justify-content: space-between;
+
+		&-image {
+			width: 45%;
+			height: auto;
+			object-fit: cover;
+		}
+
+		&-content {
+			width: 45%;
+		}
+
+		&-name {
+			font-size: 3rem;
+			font-weight: 300;
+		}
+
+		&-price {
+			font-weight: bold;
+			font-size: 3.6rem;
+			padding: 1rem 0;
+		}
+
+		&-description {
+			@include text-description;
+		}
 	}
 }

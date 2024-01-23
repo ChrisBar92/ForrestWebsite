@@ -15,20 +15,8 @@
 
 <body>
 
-    <nav class="nav">
-        <div class="nav__container wrapper">
-            <a href="index.html" class="nav__logo" aria-label="forest"><i
-                    class="fa-solid fa-tree nav__logo-icon"></i>Forest</a>
-            <ul class="nav__list">
-                <li class="nav__list-item"><a href="#" class="nav__list-link" aria-label="Home">Home</a></li>
-                <li class="nav__list-item"><a href="#aboutus" class="nav__list-link" aria-label="O nas">O nas</a></li>
-                <li class="nav__list-item"><a href="#offer" class="nav__list-link" aria-label="Oferta">Oferta</a></li>
-                <li class="nav__list-item"><a href="contact.html" class="nav__list-link"
-                        aria-label="Kontakt">Kontakt</a></li>
-            </ul>
+    <!-- @include 'nav.kit' -->
 
-        </div>
-    </nav>
     <header class="header">
         <div class="header__shadow"></div>
         <div class="header__box wrapper">
@@ -110,52 +98,11 @@
                         class="offer__more-info-link">tutaj</a></p>
             </div>
         </section>
-        <footer class="footer padding-section">
-            <div class="wrapper">
-                <div class="footer__container">
-                    <a href="#" class="nav__logo footer__logo" aria-label="forest"><i
-                            class="fa-solid fa-tree nav__logo-icon"></i>Forest</a>
-                    <div class="footer__boxes">
-                        <div class="footer__box">
-                            <p class="footer__box-name">O nas</p>
-                            <ul class="footer__box-list">
-                                <li class="footer__box-list-item"><a href="#" class="footer__box-list-link"
-                                        aria-label="historia">Historia</a></li>
-                                <li class="footer__box-list-item"><a href="#" class="footer__box-list-link"
-                                        aria-label="parki">Parki</a></li>
-                                <li class="footer__box-list-item"><a href="#" class="footer__box-list-link"
-                                        aria-label="opinie">Opinie</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer__box">
-                            <p class="footer__box-name">Nasza firma</p>
-                            <ul class="footer__box-list">
-                                <li class="footer__box-list-item"><a href="#" class="footer__box-list-link"
-                                        aria-label="Praca">Praca</a></li>
-                                <li class="footer__box-list-item"><a href="#" class="footer__box-list-link"
-                                        aria-label="Kadry">Kadry</a></li>
-                                <li class="footer__box-list-item"><a href="#" class="footer__box-list-link"
-                                        aria-label="Zarząd">Zarząd</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer__box">
-                            <p class="footer__box-name">Dokumenty</p>
-                            <ul class="footer__box-list">
-                                <li class="footer__box-list-item"><a href="#" class="footer__box-list-link"
-                                        aria-label="Wnioski">Wnioski</a></li>
-                                <li class="footer__box-list-item"><a href="#" class="footer__box-list-link"
-                                        aria-label="Rezerwacje">Rezerwacje</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <p class="footer__copyright">&copy;<span class="footer__copyright-year">2024</span> Forest Group Company
-                Ltd.</p>
-        </footer>
     </main>
 
+    <!-- @include 'footer.kit' -->
+    
+    <script src="/dist/js/main.min.js"></script>
 </body>
 
 </html>
