@@ -1,9 +1,26 @@
 $black-color: #000;
 $white-color: #fff;
 $green-color: rgb(0, 100, 0);
-$primary-bg: #eee;
+$cta-color: rgb(36, 179, 0);
+$primary-bg: #eeeeee;
 $secondary-bg: #ddd;
 $gray-color: gray;
+
+@mixin focus {
+	outline: none;
+	border: 0.1rem solid $black-color;
+	border-radius: 0.3rem;
+}
+
+@mixin shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color: #000000, $alpha: 0.6);
+	z-index: 10;
+}
 
 *,
 *::before,
@@ -25,12 +42,22 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-a {
+a,
+button {
 	border: 0.1rem solid transparent;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:focus {
+		@include focus;
+	}
+}
+
+a {
 	color: inherit;
 	text-decoration: none;
-	outline: none;
-	cursor: pointer;
 }
 
 li {
@@ -71,20 +98,8 @@ li {
 	color: $gray-color;
 }
 
-@mixin focus {
-	outline: none;
-	border: 0.1rem solid $black-color;
-	border-radius: 0.3rem;
-}
-
-@mixin shadow {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba($color: #000000, $alpha: 0.6);
-	z-index: 10;
+.btn-cta {
+	background-color: $cta-color;
 }
 
 .nav {
@@ -109,10 +124,6 @@ li {
 		padding: 2rem;
 		font-size: 3.6rem;
 
-		&:focus {
-			@include focus;
-		}
-
 		&-icon {
 			padding-right: 1rem;
 			color: $green-color;
@@ -131,10 +142,6 @@ li {
 				background-color: $black-color;
 				color: $white-color;
 				border-radius: 0.3rem;
-			}
-
-			&:focus {
-				@include focus;
 			}
 		}
 	}
@@ -237,7 +244,7 @@ li {
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		margin-top: 4rem;
+		margin: 4rem 0;
 	}
 
 	&__card {
@@ -245,8 +252,10 @@ li {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		width: 30%;
+		max-width: 25rem;
 		margin: 0 2rem;
-		padding: 3rem;
+		padding: 2rem;
 		border-radius: 0.3rem;
 		box-shadow: 0.1rem 0.1rem 0.5rem;
 		transition: scale 0.3s;
@@ -267,7 +276,7 @@ li {
 		}
 		&-list {
 			:last-child {
-				padding: 0;
+				padding-bottom: 0;
 			}
 
 			&-item {
@@ -286,19 +295,71 @@ li {
 		&-button {
 			padding: 1rem 3rem;
 			margin-top: 2rem;
-			border: 0.1rem solid $black-color;
-			border-radius: 0.3rem;
-			box-shadow: 0.1rem 0.1rem 0.5rem;
+			box-shadow: 0 0 0.5rem;
 
-			:hover {
-				.offer__card {
-					scale: 1.05;
-				}
+			&:hover {
+				cursor: pointer;
 			}
 
-			:focus {
+			&:focus {
 				@include focus;
 			}
 		}
+	}
+
+	&__more-info {
+		text-align: center;
+
+		&-link {
+			padding: 0.5rem;
+			color: $cta-color;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.footer {
+	padding-bottom: 0;
+	background-color: $secondary-bg;
+
+	&__container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: start;
+		padding-bottom: 4rem;
+	}
+
+	&__logo {
+		padding: 1rem;
+		font-weight: 300;
+	}
+
+	&__boxes {
+		display: flex;
+	}
+
+	&__box {
+		padding: 0 3rem;
+
+		&-name {
+			margin-left: 1rem;
+			font-size: 2.4rem;
+			font-weight: bold;
+		}
+
+		&-list-item {
+			padding: 1rem 0;
+		}
+
+		&-list-link {
+			padding: 1rem;
+		}
+	}
+
+	&__copyright {
+		padding: 2rem 0;
+		border-top: 0.1rem solid $black-color;
+		text-align: center;
+		font-size: 1.4rem;
 	}
 }
