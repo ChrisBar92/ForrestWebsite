@@ -3,6 +3,7 @@ $white-color: #fff;
 $green-color: rgb(0, 100, 0);
 $primary-bg: #eee;
 $secondary-bg: #ddd;
+$gray-color: gray;
 
 *,
 *::before,
@@ -15,9 +16,11 @@ $secondary-bg: #ddd;
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	scroll-padding-top: 8rem;
 }
 
 body {
+	background-color: $primary-bg;
 	font-size: 1.6rem;
 	font-family: 'Roboto', sans-serif;
 }
@@ -40,17 +43,57 @@ li {
 	margin: 0 auto;
 }
 
+.padding-section {
+	padding: 8rem 0;
+}
+
+.section-title {
+	position: relative;
+	font-size: 3.2rem;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 8rem;
+
+	&:before {
+		content: '';
+		position: absolute;
+		height: 0.2rem;
+		width: 12rem;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $green-color;
+	}
+}
+
+.gray {
+	color: $gray-color;
+}
+
 @mixin focus {
+	outline: none;
 	border: 0.1rem solid $black-color;
 	border-radius: 0.3rem;
+}
+
+@mixin shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color: #000000, $alpha: 0.6);
+	z-index: 10;
 }
 
 .nav {
 	position: sticky;
 	top: 0;
 	width: 100%;
+	box-shadow: 0 0.1rem 1rem;
 	background-color: $primary-bg;
-	// overflow: hidden;
+	overflow: hidden;
 	z-index: 30;
 
 	&__container {
@@ -108,13 +151,7 @@ li {
 	background-position: center;
 
 	&__shadow {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: rgba($color: #000000, $alpha: 0.6);
-		z-index: 10;
+		@include shadow;
 	}
 
 	&__box {
@@ -124,7 +161,7 @@ li {
 		z-index: 20;
 
 		&-name {
-			font-size: 2.4rem;
+			font-size: 2.6rem;
 			font-weight: 300;
 		}
 
@@ -136,6 +173,132 @@ li {
 }
 
 .aboutus {
-	height: 100vh;
-	background-color: #a0f;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 3rem;
+	}
+
+	&__image {
+		height: auto;
+		width: 45%;
+		object-fit: cover;
+	}
+
+	&__box {
+		width: 45%;
+
+		&-title {
+			margin-bottom: 2rem;
+			font-size: 2.6rem;
+			font-weight: bold;
+		}
+
+		&-description {
+			font-weight: 300;
+			font-size: 1.6rem;
+			line-height: 3rem;
+			text-align: justify;
+		}
+	}
+}
+
+.hero-image {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 40vh;
+	background-image: url('/dist/img/girl-5785590_1280.jpg');
+	background-size: cover;
+	background-position: center;
+
+	&__shadow {
+		@include shadow;
+	}
+
+	&__title {
+		padding: 4rem 12rem;
+		font-size: 4rem;
+		border: 0.1rem solid $white-color;
+		color: $white-color;
+		z-index: 20;
+	}
+}
+
+.offer {
+	&__title {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-top: 4rem;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0 2rem;
+		padding: 3rem;
+		border-radius: 0.3rem;
+		box-shadow: 0.1rem 0.1rem 0.5rem;
+		transition: scale 0.3s;
+
+		&:hover {
+			scale: 1.05;
+		}
+
+		&-title {
+			font-weight: 300;
+			font-size: 2.4rem;
+		}
+
+		&-price {
+			padding: 1rem 0;
+			font-size: 4rem;
+			font-weight: bold;
+		}
+		&-list {
+			:last-child {
+				padding: 0;
+			}
+
+			&-item {
+				padding: 0.5rem 0;
+
+				.fa-check,
+				.fa-minus {
+					padding-right: 1rem;
+				}
+				.fa-check {
+					color: $green-color;
+				}
+			}
+		}
+
+		&-button {
+			padding: 1rem 3rem;
+			margin-top: 2rem;
+			border: 0.1rem solid $black-color;
+			border-radius: 0.3rem;
+			box-shadow: 0.1rem 0.1rem 0.5rem;
+
+			:hover {
+				.offer__card {
+					scale: 1.05;
+				}
+			}
+
+			:focus {
+				@include focus;
+			}
+		}
+	}
 }
