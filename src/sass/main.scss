@@ -118,6 +118,17 @@ li {
 	background-color: $cta-color;
 }
 
+.active {
+	font-weight: bold;
+}
+
+.navMobile {
+	position: fixed;
+	top: 0;
+	width: 50%;
+	height: 100%;
+}
+
 .nav {
 	position: sticky;
 	top: 0;
@@ -134,6 +145,18 @@ li {
 		padding: 0 1rem;
 		color: $black-color;
 		font-weight: 300;
+	}
+
+	&__burger-menu {
+		padding: 1rem;
+		font-size: 2rem;
+		outline: none;
+		border: 0.1rem solid transparent;
+
+		&:hover {
+			@include focus;
+			cursor: pointer;
+		}
 	}
 
 	&__logo {

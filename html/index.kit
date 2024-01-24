@@ -13,11 +13,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/dist/css/main.min.css">
 
-<body>
+<body class="main-page">
 
     <!-- @include 'nav.kit' -->
 
-    <header class="header">
+    <header class="header scrollspy" id="home">
         <div class="header__shadow"></div>
         <div class="header__box wrapper">
             <p class="header__box-name">Forest Group</p>
@@ -25,7 +25,7 @@
         </div>
     </header>
     <main>
-        <section class="aboutus padding-section" id="aboutus">
+        <section class="aboutus scrollspy padding-section" id="aboutus">
             <div class="wrapper">
                 <h2 class="section-title">o nas</h2>
                 <div class="aboutus__container">
@@ -47,7 +47,7 @@
             <div class="hero-image__shadow"></div>
             <p class="hero-image__title">Przygoda dla całej rodziny</p>
         </section>
-        <section class="offer padding-section" id="offer">
+        <section class="offer scrollspy padding-section" id="offer">
             <div class="wrapper">
                 <h2 class="section-title">oferta</h2>
                 <p class="offer__title">Wybierz jedną z naszych wspaniałych ofert!</p>
@@ -101,7 +101,7 @@
     </main>
 
     <!-- @include 'footer.kit' -->
-    
+
     <script src="/dist/js/main.min.js"></script>
 </body>
 
