@@ -14,24 +14,38 @@
 <link rel="stylesheet" href="/dist/css/main.min.css">
 
 <body>
-    <nav class="nav navMobile">
-    <div class="nav__container wrapper">
-        <a href="index.html" class="nav__logo" aria-label="forest"><i
-                class="fa-solid fa-tree nav__logo-icon"></i>Forest</a>
-        <ul class="nav__list">
-            <li class="nav__list-item"><a href="#home" class="nav__list-link active" aria-label="Home">Home</a></li>
-            <li class="nav__list-item"><a href="#aboutus" class="nav__list-link" aria-label="O nas">O nas</a></li>
-            <li class="nav__list-item"><a href="#offer" class="nav__list-link" aria-label="Oferta">Oferta</a></li>
-            <li class="nav__list-item"><a href="contact.html" class="nav__list-link" aria-label="Kontakt">Kontakt</a>
-            </li>
-        </ul>
-        <button class="nav__burger">
-            <i class='bx bx-menu'></i>
-            <i class="bx bx-x hide"></i>
-        </button>
+    <nav class="nav">
+        <div class="nav__container wrapper">
+            <a href="index.html" class="nav__logo" aria-label="forest"><i
+                    class="fa-solid fa-tree nav__logo-icon"></i>Forest</a>
 
-    </div>
-</nav>
+            <button class="nav__burger">
+                <i class="fa-solid fa-bars "></i>
+                <i class="fa-solid fa-xmark hide"></i>
+            </button>
+
+            <ul class="nav__list nav__list--desktop">
+                <li class="nav__list-item"><a href="index.html" class="nav__list-link active" aria-label="Home">Home</a></li>
+                <li class="nav__list-item"><a href="index.html#aboutus" class="nav__list-link" aria-label="O nas">O nas</a></li>
+                <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link" aria-label="Oferta">Oferta</a></li>
+                <li class="nav__list-item"><a href="contact.html" class="nav__list-link"
+                        aria-label="Kontakt">Kontakt</a>
+                </li>
+            </ul>
+
+            <ul class="nav__list nav__list--mobile">
+                <li class="nav__list-item"><a href="index.html" class="nav__list-link" aria-label="Home">Home</a></li>
+                <li class="nav__list-item"><a href="index.html#aboutus" class="nav__list-link" aria-label="O nas">O
+                        nas</a></li>
+                <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link"
+                        aria-label="Oferta">Oferta</a></li>
+                <li class="nav__list-item"><a href="contact.html" class="nav__list-link"
+                        aria-label="Kontakt">Kontakt</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
 
     <section class="contact padding-section">
         <div class="wrapper">
@@ -40,9 +54,9 @@
                 <form class="contact__form">
                     <p class="contact__form-description">Chętnie odpowiemy na wszelkie pytania, aby Ci pomóc!</p>
                     <label class="contact__form-label" for="name" aria-label="Imię i nazwisko">Imię i nazwisko:</label>
-                    <input class="contact__form-input" type="text" id="name" required>
+                    <input class="contact__form-input" type="text" id="name" placeholder="Podaj imie i nazwisko" required>
                     <label class="contact__form-label" for="email" aria-label="Adres e-mail">Adres e-mail:</label>
-                    <input class="contact__form-input" type="email" id="email" required>
+                    <input class="contact__form-input" type="email" id="email" placeholder="Podaj adres e-mail" required>
                     <textarea class="contact__form-textarea" id="msg" cols="30" rows="10" placeholder="Treść wiadomości"
                         required aria-label="Treść wiadomości"></textarea>
                     <button class="contact__form-btn">Wyślij</button>
@@ -59,7 +73,7 @@
 
     <footer class="footer padding-section">
     <div class="wrapper">
-        <div class="footer__container">
+        <div class="footer__container footer__mobile">
             <a href="#" class="nav__logo footer__logo" aria-label="forest"><i
                     class="fa-solid fa-tree nav__logo-icon"></i>Forest</a>
             <div class="footer__boxes">
@@ -101,6 +115,8 @@
     <p class="footer__copyright">&copy;<span class="footer__copyright-year"></span> Forest Group Company
         Ltd.</p>
 </footer>
+
+    <script src="/dist/js/main.min.js"></script>
 </body>
 
 </html>

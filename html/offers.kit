@@ -14,7 +14,38 @@
 <link rel="stylesheet" href="/dist/css/main.min.css">
 
 <body>
-    <!-- @include 'nav.kit' -->
+    <nav class="nav">
+        <div class="nav__container wrapper">
+            <a href="index.html" class="nav__logo" aria-label="forest"><i
+                    class="fa-solid fa-tree nav__logo-icon"></i>Forest</a>
+
+            <button class="nav__burger">
+                <i class="fa-solid fa-bars "></i>
+                <i class="fa-solid fa-xmark hide"></i>
+            </button>
+
+            <ul class="nav__list nav__list--desktop">
+                <li class="nav__list-item"><a href="index.html" class="nav__list-link active" aria-label="Home">Home</a></li>
+                <li class="nav__list-item"><a href="index.html#aboutus" class="nav__list-link" aria-label="O nas">O nas</a></li>
+                <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link" aria-label="Oferta">Oferta</a></li>
+                <li class="nav__list-item"><a href="contact.html" class="nav__list-link"
+                        aria-label="Kontakt">Kontakt</a>
+                </li>
+            </ul>
+
+            <ul class="nav__list nav__list--mobile">
+                <li class="nav__list-item"><a href="index.html" class="nav__list-link" aria-label="Home">Home</a></li>
+                <li class="nav__list-item"><a href="index.html#aboutus" class="nav__list-link" aria-label="O nas">O
+                        nas</a></li>
+                <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link"
+                        aria-label="Oferta">Oferta</a></li>
+                <li class="nav__list-item"><a href="contact.html" class="nav__list-link"
+                        aria-label="Kontakt">Kontakt</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
 
     <header class="header offerts__header">
         <div class="header__shadow"></div>
@@ -30,27 +61,36 @@
                 <div class="section-title">Oferty</div>
                 <div class="offerts__container">
                     <div class="offerts__box">
-                        <img src="/dist/img/girl-5785590_1280.jpg" alt="dziecko z plecakiem idące po polanie" class="offerts__box-image">
+                        <img src="/dist/img/girl-5785590_1280.jpg" alt="dziecko z plecakiem idące po polanie"
+                            class="offerts__box-image">
                         <div class="offerts__box-content">
                             <p class="offerts__box-name">Oferta Demo</p>
                             <p class="offerts__box-price">$0</p>
-                            <p class="offerts__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid accusantium ipsum dolores ex voluptas vero odio porro dicta maiores quia quod, iure mollitia. Omnis ut earum ab iusto dignissimos.</p>
+                            <p class="offerts__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nam aliquid accusantium ipsum dolores ex voluptas vero odio porro dicta maiores quia
+                                quod, iure mollitia. Omnis ut earum ab iusto dignissimos.</p>
                         </div>
                     </div>
                     <div class="offerts__box">
+                        <img src="/dist/img/jungle-1807476_1280.jpg" alt="schodzy zarośnięte mchem w jungli"
+                            class="offerts__box-image">
                         <div class="offerts__box-content">
                             <p class="offerts__box-name">Oferta Standard</p>
                             <p class="offerts__box-price">$99</p>
-                            <p class="offerts__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid accusantium ipsum dolores ex voluptas vero odio porro dicta maiores quia quod, iure mollitia. Omnis ut earum ab iusto dignissimos.</p>
+                            <p class="offerts__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nam aliquid accusantium ipsum dolores ex voluptas vero odio porro dicta maiores quia
+                                quod, iure mollitia. Omnis ut earum ab iusto dignissimos.</p>
                         </div>
-                        <img src="/dist/img/jungle-1807476_1280.jpg" alt="schodzy zarośnięte mchem w jungli" class="offerts__box-image">
                     </div>
                     <div class="offerts__box">
-                        <img src="/dist/img/waters-3095682_1280.jpg" alt="drzewo rosnące na skale w jeziorze" class="offerts__box-image">
+                        <img src="/dist/img/waters-3095682_1280.jpg" alt="drzewo rosnące na skale w jeziorze"
+                            class="offerts__box-image">
                         <div class="offerts__box-content">
                             <p class="offerts__box-name">Oferta Premium</p>
                             <p class="offerts__box-price">$299</p>
-                            <p class="offerts__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid accusantium ipsum dolores ex voluptas vero odio porro dicta maiores quia quod, iure mollitia. Omnis ut earum ab iusto dignissimos.</p>
+                            <p class="offerts__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nam aliquid accusantium ipsum dolores ex voluptas vero odio porro dicta maiores quia
+                                quod, iure mollitia. Omnis ut earum ab iusto dignissimos.</p>
                         </div>
                     </div>
                 </div>
@@ -59,6 +99,8 @@
     </main>
 
     <!-- @include 'footer.kit' -->
+
+    <script src="/dist/js/main.min.js"></script>
 </body>
 
 </html>
