@@ -572,6 +572,21 @@ li {
 			display: none;
 		}
 	}
+
+	.header {
+		background-image: url('./dist/img/jungle-1807476_1280.jpg');
+	}
+
+	.hero-image {
+		background-image: url('./dist/img/girl-5785590_1280.jpg');
+	}
+
+	.offerts {
+		&__header {
+			background-image: url('./dist/img/waters-3095682_1280.jpg');
+		}
+
+	}
 }
 
 @media screen and (min-width: 992px) {
